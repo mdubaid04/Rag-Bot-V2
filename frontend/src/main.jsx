@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
-import store from "./store";
+import store from "./store/Index";
 import App from "./App";
 import "./index.css";
 
