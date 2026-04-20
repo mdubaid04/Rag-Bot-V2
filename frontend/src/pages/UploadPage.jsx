@@ -9,7 +9,7 @@ import {
   Loader2,
   FileText,
 } from "lucide-react";
-import { docsAPI } from "@/lib/api";
+import { docsAPI } from "@/lib/Api";
 import toast from "react-hot-toast";
 
 export default function UploadPage() {

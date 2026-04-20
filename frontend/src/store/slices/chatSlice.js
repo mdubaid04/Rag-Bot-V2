@@ -1,6 +1,6 @@
 // src/store/slices/chatSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { sessionsAPI, chatAPI } from "@/lib/api";
+import { sessionsAPI, chatAPI } from "@/lib/Api";
 
 export const fetchSessions = createAsyncThunk(
   "chat/fetchSessions",

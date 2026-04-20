@@ -64,7 +64,10 @@ app = FastAPI(
 )
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # tighten in production
+    allow_origins=[
+        "http://localhost:5173",          # local dev
+        "https://ragminds.vercel.app",  # deployed frontend ka URL
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
