@@ -1,0 +1,152 @@
+[
+  {
+    "question": "How many attention heads does the base Transformer model use?",
+    "expected_answer": "The base Transformer model uses 8 attention heads.",
+    "evidence": "8 parallel attention"
+  },
+  {
+    "question": "What is the value of d_model in the base Transformer model?",
+    "expected_answer": "The value of d_model is 512.",
+    "evidence": "dmodel = 512"
+  },
+  {
+    "question": "How many identical layers does the encoder stack contain?",
+    "expected_answer": "The encoder is composed of a stack of 6 identical layers.",
+    "evidence": "N = 6"
+  },
+  {
+    "question": "What is the dimensionality of the inner layer of the feed-forward network?",
+    "expected_answer": "The inner layer of the feed-forward network has a dimensionality of 2048.",
+    "evidence": "df f = 2048"
+  },
+  {
+    "question": "What BLEU score did the big Transformer model achieve on the WMT 2014 English-to-German translation task?",
+    "expected_answer": "The big Transformer model achieved a BLEU score of 28.4.",
+    "evidence": "28.4"
+  },
+  {
+    "question": "What BLEU score did the big Transformer model achieve on the WMT 2014 English-to-French translation task?",
+    "expected_answer": "The big Transformer model achieved a BLEU score of 41.8.",
+    "evidence": "41.0"
+  },
+  {
+    "question": "Which functions does the Transformer use to encode positional information?",
+    "expected_answer": "The Transformer uses sine and cosine functions of different frequencies.",
+    "evidence": "sine and cosine"
+  },
+  {
+    "question": "What dropout rate was applied when training the base model?",
+    "expected_answer": "A dropout rate of 0.1 was applied.",
+    "evidence": "Pdrop = 0.1"
+  },
+  {
+    "question": "On what hardware was the base model trained?",
+    "expected_answer": "The base model was trained on one machine with 8 NVIDIA P100 GPUs.",
+    "evidence": "8 NVIDIA P100"
+  },
+  {
+    "question": "How many warmup steps were used in the learning rate schedule?",
+    "expected_answer": "The learning rate schedule used 4000 warmup steps.",
+    "evidence": "warmup_steps = 4000"
+  },
+  {
+    "question": "Which optimizer was used to train the Transformer models?",
+    "expected_answer": "The models were trained with the Adam optimizer.",
+    "evidence": "adam optimizer"
+  },
+  {
+    "question": "What value of label smoothing was employed during training?",
+    "expected_answer": "Label smoothing with a value of 0.1 was employed.",
+    "evidence": "label smoothing of value"
+  },
+  {
+    "question": "What beam size was used for beam search during inference?",
+    "expected_answer": "A beam size of 4 was used, together with a length penalty of 0.6.",
+    "evidence": "beam size of 4"
+  },
+  {
+    "question": "How large is the shared source-target vocabulary used for English-to-German translation?",
+    "expected_answer": "The shared vocabulary contains about 37000 tokens.",
+    "evidence": "37000 tokens"
+  },
+  {
+    "question": "Which encoding method was used for the English-German training sentence pairs?",
+    "expected_answer": "The sentences were encoded using byte-pair encoding.",
+    "evidence": "byte-pair encoding"
+  },
+  {
+    "question": "How many sentence pairs are in the WMT 2014 English-German training dataset?",
+    "expected_answer": "The dataset consists of about 4.5 million sentence pairs.",
+    "evidence": "4.5 million sentence pairs"
+  },
+  {
+    "question": "How many sentences does the WMT 2014 English-French dataset contain?",
+    "expected_answer": "The English-French dataset consists of 36M sentences.",
+    "evidence": "36m sentences"
+  },
+  {
+    "question": "How long did it take to train the big models?",
+    "expected_answer": "The big models were trained for 3.5 days.",
+    "evidence": "3.5 days"
+  },
+  {
+    "question": "How long did each training step take for the base models?",
+    "expected_answer": "Each training step took about 0.4 seconds for the base models.",
+    "evidence": "0.4 seconds"
+  },
+  {
+    "question": "How much worse was single-head attention compared with the best setting in the ablation study?",
+    "expected_answer": "Single-head attention was 0.9 BLEU worse than the best setting.",
+    "evidence": "0.9 bleu worse"
+  },
+  {
+    "question": "Why is the dot product scaled by the square root of the key dimension in scaled dot-product attention?",
+    "expected_answer": "For large values of the key dimension, the dot products grow large and push the softmax function into regions with extremely small gradients, so scaling counteracts this effect.",
+    "evidence": "extremely small gradients"
+  },
+  {
+    "question": "What are the two sub-layers in each encoder layer?",
+    "expected_answer": "Each encoder layer has a multi-head self-attention mechanism and a position-wise fully connected feed-forward network.",
+    "evidence": "the second is a simple"
+  },
+  {
+    "question": "How does the decoder ensure that predictions for a position depend only on earlier positions?",
+    "expected_answer": "The decoder masks its self-attention, and the output embeddings are offset by one position.",
+    "evidence": "offset by one position"
+  },
+  {
+    "question": "For how many training steps were the base models trained?",
+    "expected_answer": "The base models were trained for a total of 100,000 steps, which took about 12 hours.",
+    "evidence": "100,000 steps"
+  },
+  {
+    "question": "What is applied around each sub-layer in the encoder and decoder?",
+    "expected_answer": "A residual connection is employed around each sub-layer, followed by layer normalization.",
+    "evidence": "layer normalization"
+  },
+  {
+    "question": "What kind of progression do the wavelengths of the positional encoding sinusoids form?",
+    "expected_answer": "The wavelengths form a geometric progression from 2 pi to 10000 times 2 pi.",
+    "evidence": "geometric progression"
+  },
+  {
+    "question": "Why did the authors choose the sinusoidal version of positional encoding?",
+    "expected_answer": "It may allow the model to extrapolate to sequence lengths longer than the ones encountered during training.",
+    "evidence": "sequence lengths longer than the ones encountered during training"
+  },
+  {
+    "question": "In which three ways is multi-head attention used in the Transformer?",
+    "expected_answer": "It is used in encoder-decoder attention layers, encoder self-attention layers, and decoder self-attention layers.",
+    "evidence": "encoder-decoder attention"
+  },
+  {
+    "question": "Which values of beta1 and beta2 were used with the Adam optimizer?",
+    "expected_answer": "The values were beta1 = 0.9 and beta2 = 0.98.",
+    "evidence": "0.98"
+  },
+  {
+    "question": "What did the ablation study show about reducing the attention key size?",
+    "expected_answer": "Reducing the attention key size hurts model quality.",
+    "evidence": "hurts model quality"
+  }
+]

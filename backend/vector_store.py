@@ -25,7 +25,7 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-
 INDEX_NAME = "langgraph-rag-index" # Make sure this matches your actual index name
 
 # --- Retriever (Existing function) ---
-def get_retriever():
+def get_retriever(k:int=4):
     """Initializes and returns the Pinecone vector store retriever."""
     # Ensure the index exists, create if not
     if INDEX_NAME not in pc.list_indexes().names():
@@ -39,7 +39,7 @@ def get_retriever():
         print(f"Created new Pinecone index: {INDEX_NAME}")
     
     vectorstore = PineconeVectorStore(index_name=INDEX_NAME, embedding=embeddings)
-    return vectorstore.as_retriever()
+    return vectorstore.as_retriever(search_kwargs={"k": k})
 
 # --- Function to add documents to the vector store ---
 def upload_doc(text_content: str)->int:
